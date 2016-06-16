@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,15 +13,25 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
     server.cpp \
-    client.cpp
+    client.cpp \
+    util.cpp \
+    group.cpp \
+    globle.cpp \
+    peer.cpp
 
-HEADERS  += mainwindow.h \
+HEADERS  += \
     server.h \
-    client.h
+    client.h \
+    util.h \
+    enum.h \
+    group.h \
+    globle.h \
+    peer.h
 
-FORMS    += mainwindow.ui
+FORMS    += \
+    group.ui \
+    peer.ui
 
 RESOURCES += \
     qdarkstyle/style.qrc

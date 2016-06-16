@@ -1,7 +1,11 @@
-#include "mainwindow.h"
 #include <QApplication>
 #include <QFile>
 #include <QTextStream>
+#include <QtSql/QSqlDatabase>
+#include <QDebug>
+#include <QUdpSocket>
+
+#include "group.h"
 
 int main(int argc, char *argv[])
 {
@@ -18,10 +22,7 @@ int main(int argc, char *argv[])
         QTextStream ts(&f);
         qApp->setStyleSheet(ts.readAll());
     }
-
-
-    MainWindow w;
+    Group w;
     w.show();
-
     return a.exec();
 }
